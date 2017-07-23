@@ -44,18 +44,19 @@ for(i=0;i<=lenb;i++)
  for(i=lenb;i>=0;i--)
  {
     carry=0;
-    for(j=lena;j>=0;j--){
+    for(j=lena;j>=0;j--)
+      {
     bla[k++] = (b[i]*a[j] + carry)%10;
     carry = (b[i]*a[j]+carry)/10; 
+      }
+      bla[k++] = carry;
     
- }bla[k++] = carry;
-    
-    //printf("bla%d\n",bla[k-1]);
+  
     x++;
  for(y = 0;y<x;y++)
  {
     bla[k++] = 0;
-   // printf("blaaa%d\n",bla[k-1]); 
+   
  }
 }
  
