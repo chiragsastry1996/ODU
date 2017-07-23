@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+.table{
+position:fixed;
+top: 150px;
+left:600px;
+}
+</style>
+    <meta charset="utf-8" />
+    <meta name="description" content="JavaScript" />
+    <meta name="keywords" content="JavaScript, UserInput" />
+    <title>JavaScript accept user input demo</title>
+    <script type="text/javascript">
+        function displayOutput() {
+            var input = document.getElementById("userInput").value;
+            var text = "";
+	    var j = 1;
+	    var temp = input;
+	while (j < 11)
+	 { input=temp*j;
+   	   text += "<br>"+temp+"x" + j +"="+ input;
+    	   
+    	   ++j;
+          }
+           document.getElementById("result").innerHTML = text;
+        }
+    </script>
+
+</head>
+<body>
+<div class="table">
+    <h1 id="result">Single Table</h1>
+    <input type="text" id="userInput" placeholder="Enter Number" />
+    <input type="submit" value="Submit" onclick="displayOutput()" />
+</div>
+</body>
+</html>

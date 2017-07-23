@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+
+        TARTL &middot;
+
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+        
+        #table{
+            width: 100%;
+        }
+        .border{
+             border-style: solid;
+             border-width: 1px;
+             margin-right: 5px;
+             border-radius: 3px;
+             margin-bottom: 5px;
+        }
+    </style>
+
+    </head>
+    <body>
+
+
+        <div class="container" style="margin-top: 50px">
+            <center>
+                <h1>Table</h1>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Number</label>
+                <input type="number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="Enter a number" required>
+                <button type="submit" class="btn btn-primary" id="submit" style="margin-top: 10px">Submit</button>
+            
+              </div>
+               
+
+               <div id="comehere" class="container"></div>
+            </center>
+                 
+                   
+                
+           
+            
+        </div>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        var string="";
+       
+           $("#submit").click(function () {
+                    
+                    $('#table').remove();
+                    string='<div id="table" class="row" >';
+                      $("#comehere").html(string);
+                    
+                   var number = $('#number').val();
+                  
+                        
+                  for (var i = 1; i <= number; i++) {
+                          string +=" <div class='col-md-2 border'>";
+                         for (var j = 0; j <= 10; j++) {
+                             string +=" "+i+"x"+j+"="+i*j+"<br>";
+                         }
+                        string +="</div>";
+                  }
+                       string +="</div>";
+                  $("#table").html(string);
+            });
+        </script>
+
+
+    </body>
+</html>
